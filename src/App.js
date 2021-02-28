@@ -13,7 +13,10 @@ class App extends Component {
   }
 
   deleteCharHandler = ( index ) => {
-
+    const text = this.state.userInput.split('');
+    text.splice(index , 1);
+    const updatedText = text.join('');
+    this.setState({userInput: updatedText});
   }
 
   render() {
